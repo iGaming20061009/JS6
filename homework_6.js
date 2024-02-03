@@ -27,14 +27,16 @@ let text = document.querySelectorAll(".random");
 text.forEach(function (item) {
     let newPara = document.createElement("p");
     newPara.textContent = "Hello world!";
-    newPara.classList.add("title");
+    // newPara.classList.add("title");
     item.appendChild(newPara);
 });
 
 //3
-var burgerMenu = document.getElementById('burger-menu');
-var overlay = document.getElementById('menu');
-burgerMenu.addEventListener('click',function(){
-  this.classList.toggle("close");
-  overlay.classList.toggle("overlay");
+
+let hamburger = document.querySelector(".hamburger");
+let menu = document.querySelector(".navbar");
+hamburger.addEventListener("click", function () { 
+  hamburger.classList.toggle("is-active");
+  menu.classList.toggle("active");
+  console.log(hamburger);
 });
